@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,600;1,400;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: tomato;
+    color:  white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 0px 0px 10px black;
+    position: sticky;
+    top: 0;
+}
+.links{
+    transition: all 0.5s ease;
+}
+.links li{
+    float: left;
+    list-style: none;
+    padding: 1rem;
+}
+.links li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.logo{
+    font-family: 'Cormorant Infant', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2em;
+    padding: 0 1rem;
+    text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+}
+.pg{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(248, 248, 251);
+    width: 100%;
+    height: 90vh;
+
+}
+.question{
+   /*  width: 70%;
+    height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:  'Cormorant Infant', serif;
+    font-style: italic;
+    font-size: 7rem;
+    font-weight: 700;
+}
+.options{
+   /*  width: 30%;
+    height: 100%; */
+  /*   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-gap: 0.4rem;
+}
+.option{
+    border-radius: 13px;
+    border: none;
+    box-shadow: 0px 0px 10px black;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 6rem;
+    color: white;
+    font-style: italic;
+    font-weight: 700;
+}
+.option:nth-child(1){
+  background-color: tomato;
+  
+}
+.option:nth-child(2){
+  background-color: rgb(86, 142, 188);
+
+}
+.option:nth-child(3){
+  background-color: rgb(234, 217, 34);
+
+}
+.option:active{
+    scale: 0.96;
+}
+.links li:hover{
+    background-color: gold;
+}
+.links li.tapped{
+    background-color: gold;
+}
+
+.pg:nth-child(2),.pg:nth-child(3){
+   text-align: center;
+   font-size: 5rem;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.scoreBoard{
+  position: fixed;
+  width: 80%;
+  height: 70vh;
+  background-color: tomato;
+  top: 50%;
+  left: -500%;
+  transform: translate(-50%,-50%);
+  border-radius: 2rem;
+  z-index: 1;
+  color: rgb(234, 217, 34);
+  font-weight: 700;
+  font-size: 90%;
+  text-align: center;
+  padding: 1rem;
+  text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+  border: solid 2px;
+  box-shadow: 0px 0px 160px black;
+}
+.loadbtn{
+  padding: 1rem 3rem;
+  background-color: rgb(234, 217, 34);
+  border: solid 1px;
+  box-shadow: 0px 0px 9px black;
+
+}
+.loadbtn:active{
+  scale: 0.95;
+}
+.content-area{
+  display: flex;
+  height: 70%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.content-area footer{
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+
+
+@media screen and (max-width: 761px) {
+    .hamburger{
+        display: block;
+    }
+
+   .hamburger.activee .bar:nth-child(2){
+     opacity: 0;
+   }
+   .hamburger.activee .bar:nth-child(1){
+     transform: translateY(8px) rotate(45deg);
+   }
+   .hamburger.activee .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+   }
+
+  .links{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: tomato;
+    top: 40px;
+    right: -100%;
+    border: solid;
+    border-color: transparent white;
+    box-shadow: 0px 0px 10px black;
+  }
+
+  .links.activee{
+    right: 0;
+  }
+}
