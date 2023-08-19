@@ -136,6 +136,3 @@ hamburger.addEventListener("click", () =>{
     hamburger.classList.toggle("activee")
     link.classList.toggle("activee")
 })
-//js bla bla bla
-
- 
