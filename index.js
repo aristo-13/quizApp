@@ -130,7 +130,7 @@ function showpg(id){
 }
 
 let link = document.querySelector(".links")
-let hamburger = document.querySelector(".hamburger")
+let hamburger = document.querySelector(".Hamburger")
 
 hamburger.addEventListener("click", () =>{
     hamburger.classList.toggle("activee")

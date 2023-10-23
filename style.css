@@ -101,7 +101,7 @@
    text-align: center;
    font-size: 5rem;
 }
-.hamburger{
+.Hamburger{
     display: none;
     cursor: pointer;
 }
@@ -158,17 +158,17 @@
 
 
 @media screen and (max-width: 761px) {
-    .hamburger{
+    .Hamburger{
         display: block;
     }
 
-   .hamburger.activee .bar:nth-child(2){
+   .Hamburger.activee .bar:nth-child(2){
      opacity: 0;
    }
-   .hamburger.activee .bar:nth-child(1){
+   .Hamburger.activee .bar:nth-child(1){
      transform: translateY(8px) rotate(45deg);
    }
-   .hamburger.activee .bar:nth-child(3){
+   .Hamburger.activee .bar:nth-child(3){
     transform: translateY(-8px) rotate(-45deg);
    }
 
