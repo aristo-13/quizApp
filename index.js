@@ -112,11 +112,6 @@ function shuffleQuestNanswers(){
     
 }
 
-function  showWrongNote(){
-   const ssrc = 'buzzer-or-wrong-answer-20582.mp3'
-   const audio = new Audio()
-   audio.play(ssrc)
-}
 
 let links = document.querySelectorAll(".links li")
 let pg = document.querySelectorAll(".pg")
